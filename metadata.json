@@ -1,0 +1,6 @@
+{
+  "name": "سرو سیستم | فروشگاه تخصصی کامپیوتر، گیمینگ و تجهیزات شبکه",
+  "description": "سرو سیستم؛ مرجع تخصصی خرید تجهیزات دیجیتال، قطعات کامپیوتر، لوازم گیمینگ، لپ‌تاپ، محصولات استوک و خدمات تخصصی شبکه و VoIP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

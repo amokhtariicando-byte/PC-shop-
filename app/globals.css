@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: var(--font-vazirmatn), "Vazirmatn", system-ui, -apple-system, sans-serif;
+  --color-sarv-green: #094532;
+  --color-sarv-green-dark: #063828;
+  --color-sarv-green-soft: #1d5141;
+  --color-sarv-orange: #ff611a;
+  --color-sarv-orange-hover: #e5500d;
+  --color-sarv-cream: #f7e6ce;
+  --color-sarv-cream-light: #fbf4e9;
+  --color-sarv-teal: #5d919b;
+  --color-sarv-coral: #f87c44;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "ss01", "tnum";
+  }
+
+  body {
+    background-color: #fafafa;
+    color: #1f2937;
+    overflow-x: hidden;
+  }
+}
+
+/* Dot pattern motif matching the Sarv System hero and banner cards */
+.sarv-dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1.4px, transparent 1.4px);
+  background-size: 16px 16px;
+}
+
+.sarv-dot-pattern-dark {
+  background-image: radial-gradient(rgba(160, 120, 75, 0.24) 1.4px, transparent 1.4px);
+  background-size: 16px 16px;
+}
+
+/* Custom subtle scrollbars for horizontal mobile carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes sarv-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-sarv-float {
+  animation: sarv-float 4.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sarv-float {
+    animation: none;
+  }
+}
+
+.hero-img-blend {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
+    linear-gradient(to bottom, black 0%, black 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
+    linear-gradient(to bottom, black 0%, black 90%, transparent 100%);
+  mask-composite: intersect;
+}
+
