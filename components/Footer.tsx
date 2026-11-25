@@ -16,6 +16,7 @@ import {
   Headphones,
 } from 'lucide-react';
 import { toPersianDigits } from '@/lib/store-logic';
+import { FooterTrapezoidBg } from '@/components/home/NotchedShapes';
 
 const TRUST_FEATURES = [
   { label: 'پرداخت امن و آسان', icon: CreditCard },
@@ -29,7 +30,7 @@ export default function Footer() {
     <footer className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
       {/* Trust Features Bar matching screenshot 6 & 7 */}
       <div className="bg-[#efefef] rounded-2xl sm:rounded-3xl px-5 py-5 mb-12">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 lg:divide-x lg:divide-x-reverse lg:divide-gray-300/70">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 lg:divide-x lg:divide-x-reverse lg:divide-gray-300/70">
           {TRUST_FEATURES.map((item) => {
             const Icon = item.icon;
             return (
@@ -50,11 +51,14 @@ export default function Footer() {
       </div>
 
       {/* Main Deep Forest Green Footer Card matching screenshot 7 */}
-      <div className="relative bg-[#063f2d] text-white rounded-[28px] sm:rounded-[34px] px-5 sm:px-8 lg:px-10 pt-14 sm:pt-12 pb-6 sm:pb-8 shadow-xl">
-        {/* Top-Right Protruding Orange Social Tab */}
-        <div className="absolute -top-5 right-5 sm:right-10 bg-[#ff611a] text-white rounded-2xl px-5 py-2.5 sm:py-3 flex items-center gap-4 shadow-lg shadow-orange-600/25">
-          <span className="text-xs sm:text-sm font-bold whitespace-nowrap">با ما همراه باشید:</span>
-          <div className="flex items-center gap-2.5">
+      <div className="relative bg-[#063f2d] text-white rounded-[28px] sm:rounded-[34px] px-5 sm:px-8 lg:px-10 pt-16 sm:pt-14 pb-6 sm:pb-8 shadow-xl">
+        {/* Top-Right Protruding Soft-Trapezoid Orange Social Tab (Screenshot 7) */}
+        <div className="absolute -top-5 right-5 sm:right-12 h-[54px] sm:h-[58px] px-7 sm:px-9 flex items-center gap-4 drop-shadow-[0_10px_18px_rgba(255,97,26,0.28)]">
+          <FooterTrapezoidBg className="absolute inset-0 -z-0" />
+          <span className="relative z-10 text-xs sm:text-sm font-bold text-white whitespace-nowrap">
+            با ما همراه باشید:
+          </span>
+          <div className="relative z-10 flex items-center gap-2.5">
             <a
               href="https://whatsapp.com"
               target="_blank"

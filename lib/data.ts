@@ -390,8 +390,8 @@ export const PRODUCTS: Product[] = [
     price: 24900000,
     originalPrice: 26800000,
     discountPercent: 7,
-    image: '/assets/extracted/banner-network-gear.png',
-    gallery: ['/assets/extracted/banner-network-gear.png', '/assets/extracted/prod-hub.png'],
+    image: '/assets/extracted/cutout-network-gear.png',
+    gallery: ['/assets/extracted/cutout-network-gear.png', '/assets/extracted/prod-hub.png'],
     sold: 16,
     remaining: 84,
     rating: 4.9,
@@ -691,7 +691,7 @@ export const HERO_SLIDES = [
     subtitle: 'مرجع تخصصی خرید تجهیزات دیجیتال و کامپیوتر',
     ctaLabel: 'فروشگاه',
     ctaHref: '/shop',
-    image: '/assets/extracted/hero-pc-setup.png',
+    image: '/assets/extracted/cutout-pc-case.png',
   },
   {
     id: 'slide-2',
@@ -699,7 +699,7 @@ export const HERO_SLIDES = [
     subtitle: 'سیستم‌های رندرینگ و گیمینگ با مشاوره رایگان مهندسی',
     ctaLabel: 'مشاهده قطعات',
     ctaHref: '/shop?category=computer',
-    image: '/assets/extracted/hero-pc-setup.png',
+    image: '/assets/extracted/cutout-pc-case.png',
   },
   {
     id: 'slide-3',
@@ -707,6 +707,6 @@ export const HERO_SLIDES = [
     subtitle: 'تأمین تجهیزات سازمانی و راه‌اندازی حرفه‌ای VoIP',
     ctaLabel: 'خدمات شبکه',
     ctaHref: '/services',
-    image: '/assets/extracted/hero-pc-setup.png',
+    image: '/assets/extracted/cutout-pc-case.png',
   },
 ];

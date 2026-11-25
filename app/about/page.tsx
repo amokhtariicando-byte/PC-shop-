@@ -43,7 +43,7 @@ export default function AboutPage() {
         <div className="lg:col-span-5 relative z-10 flex justify-center">
           <div className="relative w-72 h-56">
             <Image
-              src="/assets/extracted/hero-pc-setup.png"
+              src="/assets/extracted/cutout-pc-case.png"
               alt="تجهیزات تخصصی سرو سیستم"
               fill
               sizes="288px"

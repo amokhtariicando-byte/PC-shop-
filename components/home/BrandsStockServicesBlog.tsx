@@ -8,6 +8,7 @@ import { ArrowLeft, Globe, PhoneCall, Calendar, Clock } from 'lucide-react';
 import { BRANDS, PRODUCTS, BLOG_POSTS, SERVICES } from '@/lib/data';
 import { toPersianDigits } from '@/lib/store-logic';
 import ProductCard from '@/components/ProductCard';
+import { TopNotchBay, SectionRibbonFlourish } from './NotchedShapes';
 
 export default function BrandsStockServicesBlog() {
   const [stockPage, setStockPage] = useState(0);
@@ -32,7 +33,7 @@ export default function BrandsStockServicesBlog() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-x-reverse lg:divide-gray-200">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-0 lg:divide-x lg:divide-x-reverse lg:divide-gray-200">
           {BRANDS.map((brand) => (
             <motion.div key={brand.id} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
               <Link
@@ -63,11 +64,8 @@ export default function BrandsStockServicesBlog() {
 
       {/* Dark Forest Green Stock Products Container matching screenshot 5 */}
       <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-[#1d5141] rounded-[30px] sm:rounded-[36px] px-4 sm:px-7 py-7 sm:py-8 overflow-hidden shadow-xl shadow-[#094532]/15">
-          <div
-            aria-hidden="true"
-            className="absolute -top-10 -left-10 w-60 h-60 rounded-full border-[24px] border-white/6 pointer-events-none"
-          />
+        <div className="relative bg-[#225445] rounded-[30px] sm:rounded-[36px] px-4 sm:px-7 py-7 sm:py-8 overflow-hidden shadow-xl shadow-[#094532]/15">
+          <SectionRibbonFlourish className="absolute -top-4 -left-6 w-64 h-48 text-white" />
 
           <div className="relative z-10 flex items-center justify-between gap-4 mb-6">
             <div className="flex items-start gap-2.5 text-white">
@@ -119,7 +117,7 @@ export default function BrandsStockServicesBlog() {
         </div>
       </section>
 
-      {/* Specialized Network & Communication Services matching screenshots 5 & 6 */}
+      {/* Specialized Network & Communication Services with TRUE Top-Left Concave Scoops (Screenshots 5 & 6) */}
       <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-start gap-2.5 mb-7">
           <span aria-hidden="true" className="w-1 h-10 rounded-full bg-[#ff611a] mt-0.5" />
@@ -147,9 +145,9 @@ export default function BrandsStockServicesBlog() {
             </Link>
           </div>
 
-          {/* Left Two Notched Service Cards (Teal + Coral Orange) */}
+          {/* Left Two True Concave-Notched Service Cards (Teal + Coral Orange) */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-11 sm:gap-6 pt-7">
               {SERVICES.slice(0, 2).map((srv) => {
                 const isTeal = srv.color === 'teal';
                 const Icon = isTeal ? Globe : PhoneCall;
@@ -158,31 +156,35 @@ export default function BrandsStockServicesBlog() {
                     key={srv.id}
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.25 }}
-                    className={`relative rounded-[28px] p-6 pt-11 text-white shadow-lg overflow-visible ${
+                    className={`relative rounded-[28px] p-6 pt-12 text-white overflow-visible ${
                       isTeal
-                        ? 'bg-gradient-to-br from-[#6496a0] to-[#4e808a] shadow-teal-900/15'
-                        : 'bg-gradient-to-br from-[#fb8149] to-[#f46b2f] shadow-orange-600/20'
+                        ? 'bg-gradient-to-br from-[#6496a0] to-[#4e808a] shadow-[0_14px_26px_-14px_rgba(16,59,67,0.45)]'
+                        : 'bg-gradient-to-br from-[#fb8149] to-[#f46b2f] shadow-[0_14px_26px_-14px_rgba(217,77,18,0.45)]'
                     }`}
                   >
-                    {/* Top Left Protruding Circular Icon Badge matching screenshot 6 */}
-                    <div
-                      className={`absolute -top-6 left-7 w-14 h-14 rounded-full ring-[6px] ring-[#fafafa] flex items-center justify-center shadow-md ${
-                        isTeal ? 'bg-[#103b43]' : 'bg-[#d94d12]'
-                      }`}
-                    >
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
+                    {/* TRUE G1-Continuous Top-Left Concave Scoop + Concentric Icon Circle */}
+                    <TopNotchBay className="left-4 sm:left-6">
+                      <div
+                        className={`w-12 h-12 rounded-full flex items-center justify-center shadow-md ${
+                          isTeal ? 'bg-[#103b43]' : 'bg-[#d94d12]'
+                        }`}
+                      >
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                    </TopNotchBay>
 
                     <div
                       aria-hidden="true"
-                      className="absolute bottom-3 right-5 w-28 h-14 sarv-dot-pattern opacity-60 pointer-events-none"
+                      className="absolute bottom-3 right-5 w-28 h-14 sarv-dot-pattern opacity-70 pointer-events-none"
                     />
 
                     <div className="relative z-10 space-y-2.5">
                       <div className="flex items-center gap-2">
                         <span
                           aria-hidden="true"
-                          className="w-1 h-6 rounded-full bg-white/90 shrink-0"
+                          className={`w-1 h-6 rounded-full shrink-0 ${
+                            isTeal ? 'bg-[#ff611a]' : 'bg-[#c93e05]'
+                          }`}
                         />
                         <h3 className="text-base sm:text-lg font-black">{srv.title}</h3>
                       </div>

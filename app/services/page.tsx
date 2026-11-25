@@ -44,7 +44,7 @@ export default function ServicesPage() {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-64 h-52">
               <Image
-                src="/assets/extracted/banner-network-gear.png"
+                src="/assets/extracted/cutout-network-gear.png"
                 alt="تجهیزات شبکه سازمانی سرو سیستم"
                 fill
                 sizes="260px"
